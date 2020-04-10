@@ -4,7 +4,42 @@
   filter: hue-rotate(240deg);
 }
 
-#login input[type="submit"] {
-  // Rotate login submit button's color, blue becomes green
-  filter: hue-rotate(240deg);
+#login {
+  // Login page background, U.S. Navy sailors:
+  // https://www.flickr.com/photos/usnavy/8576451249
+  background-image: url("../img/apocalypse/virus/login.jpg");
+
+  #icinga-logo {
+    // Logo on login page, biohazard (dark):
+    //  // https://commons.wikimedia.org/wiki/File:Biohazard.svg
+    background-image: url("../img/apocalypse/virus/biohazard/dark.svg");
+  }
+
+  input[type="submit"] {
+    // Rotate login submit button's color, blue becomes green
+    filter: hue-rotate(240deg);
+  }
+}
+
+#layout:not(.minimal-layout) {
+  &, &.sidebar-collapsed {
+    #header-logo {
+      // Header logo, biohazard (light)
+      background-image: url("../img/apocalypse/virus/biohazard/light.svg");
+    }
+  }
+}
+
+#layout.minimal-layout #header-logo {
+  // Mobile header logo, biohazard (light)
+  background-image: url("../img/apocalypse/virus/biohazard/light.svg");
+}
+
+#layout:not(.minimal-layout) #menu {
+  // Menu background, SARS-CoV-2 virus:
+  // https://commons.wikimedia.org/wiki/File:SARS-CoV-2_without_background.png
+  background-image: url("../img/apocalypse/virus/sars-cov2.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
 }
